@@ -89,6 +89,12 @@ The API will be available at http://localhost:3001
 | NEW_RELIC_LOG_LEVEL | New Relic log level |
 | NEW_RELIC_ENABLED | Enable/disable New Relic |
 
+## 💬 Messaging
+
+The service uses **RabbitMQ** for asynchronous messaging, enabling reliable, scalable, and decoupled transaction processing.
+
+![](https://github.com/jacksonn455/wallet-service/blob/main/images/rabbitmq.png)
+
 ## 📚 API Documentation
 
 Comprehensive API documentation is available at:
@@ -103,6 +109,8 @@ http://localhost:3001/api-docs
 - Authentication Support: Configure JWT tokens
 - Real-time Testing: Execute API calls with sample data
 - Downloadable OpenAPI specification
+
+![](https://github.com/jacksonn455/wallet-service/blob/main/images/swagger.png)
 
 ## 🐳 Docker Setup
 
@@ -288,6 +296,12 @@ X-RateLimit-Reset: 1640995200
 }
 ```
 
+## 🧪 Testing
+
+The project uses **Jest** for unit and integration tests, ensuring code reliability and correctness.
+
+![](https://github.com/jacksonn455/wallet-service/blob/main/images/jest.png)
+
 ## 📊 Monitoring
 
 This application is integrated with **New Relic APM** for comprehensive monitoring:
@@ -304,6 +318,8 @@ This application is integrated with **New Relic APM** for comprehensive monitori
 - Transaction processing times
 - Authentication success/failure rates
 - Cache hit/miss ratios
+
+![](https://github.com/jacksonn455/wallet-service/blob/main/images/swagger.png)
 
 ## 🔀 Gitflow & Code Review
 
