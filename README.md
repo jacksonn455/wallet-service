@@ -114,7 +114,9 @@ http://localhost:3001/api-docs
 
 ## 🐳 Docker Setup
 
-To run the service using Docker, follow these steps:
+You can run the service using either **Docker** or **Docker Compose**.
+
+### Using Docker
 
 1. **Build the Docker image:**
     ```bash
@@ -128,6 +130,18 @@ To run the service using Docker, follow these steps:
 
 3. **Access the API:**
     Open your browser and go to `http://localhost:3001`.
+
+### Using Docker Compose
+
+1. **Start the services:**
+    ```bash
+    docker-compose up --build
+    ```
+
+2. **Access the API:**
+    Open your browser and go to `http://localhost:3001`.
+
+> The `docker-compose.yml` file includes all necessary services like PostgreSQL, Redis, and RabbitMQ.
 
 ## 🔑 Authentication & Security
 
@@ -319,7 +333,7 @@ This application is integrated with **New Relic APM** for comprehensive monitori
 - Authentication success/failure rates
 - Cache hit/miss ratios
 
-![](https://github.com/jacksonn455/wallet-service/blob/main/images/swagger.png)
+![](https://github.com/jacksonn455/wallet-service/blob/main/images/new-relic.png)
 
 ## 🔀 Gitflow & Code Review
 
