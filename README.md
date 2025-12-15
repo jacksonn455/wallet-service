@@ -2,6 +2,39 @@
 
 Digital wallet service developed in Node.js with TypeScript, offering wallet and financial transaction management with event-driven architecture.
 
+## Project Structure
+
+```
+wallet-service/
+├── src/                          # Source code directory
+│   ├── config/                   # Configuration files (e.g., database, JWT)
+│   ├── controllers/              # HTTP request handlers
+│   ├── docs/                     # API documentation (e.g., Swagger files)
+│   ├── entities/                 # Database models and schemas
+│   ├── middlewares/              # Custom middleware (e.g., auth, rate limiting)
+│   ├── repositories/             # Data access layer (e.g., Prisma queries)
+│   ├── routes/                   # API route definitions
+│   ├── services/                 # Business logic layer
+│   ├── types/                    # TypeScript type definitions
+│   ├── utils/                    # Utility functions (e.g., helpers, validators)
+│   └── server.ts                 # Entry point for the Express server
+├── test/                         # Test files (unit and integration tests with Jest)
+├── .env                          # Environment variables (copy from .env.example)
+├── .env.example                  # Sample environment variables
+├── .gitignore                    # Git ignore rules
+├── .prettierrc                   # Prettier code formatting config
+├── docker-compose.yml            # Docker Compose for multi-container setup (Postgres, Redis, RabbitMQ)
+├── Dockerfile                    # Docker image build instructions
+├── eslint.config.js              # ESLint linting configuration
+├── jest.config.js                # Jest testing configuration
+├── newrelic.js                   # New Relic APM integration
+├── package-lock.json             # NPM dependency lockfile
+├── package.json                  # Project dependencies and scripts
+├── README.md                     # Project documentation
+├── tsconfig.build.json           # TypeScript config for builds
+└── tsconfig.json                 # Main TypeScript configuration
+```
+
 ## 🚀 Technologies
 
 - **Node.js** with **TypeScript**
