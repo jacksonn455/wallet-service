@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: wallet-service-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - wallet-service-network
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: wallet-service-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - wallet-service-network
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: wallet-service-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: wallet_service
+      POSTGRES_USER: wallet_user
+      POSTGRES_PASSWORD: wallet_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - wallet-service-network
+
+volumes:
+  redis_data:
+  rabbitmq_data:
+  postgres_data:
+
+networks:
+  wallet-service-network:
+    driver: bridge
