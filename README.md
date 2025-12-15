@@ -35,7 +35,7 @@ wallet-service/
 └── tsconfig.json                 # Main TypeScript configuration
 ```
 
-## 🚀 Technologies
+## Technologies
 
 - **Node.js** with **TypeScript**
 - **Express** - Web framework
@@ -47,7 +47,7 @@ wallet-service/
 - **Swagger** - API documentation
 - **Docker** - Containerization
 
-## 📋 Features
+## Features
 
 - ✅ Digital wallet creation and management
 - ✅ Transaction processing (credit/debit)
@@ -59,7 +59,7 @@ wallet-service/
 - ✅ Interactive documentation with Swagger
 - ✅ Production-ready monitoring with New Relic (APM, distributed tracing, logs and alerts)
 
-## 🏗️ Architecture
+## Architecture
 
 The service is built using a modular architecture, following best practices for scalability and maintainability:
 
@@ -69,13 +69,13 @@ The service is built using a modular architecture, following best practices for 
 - **Message Queue:** RabbitMQ is used for processing transactions asynchronously.
 - **Cache:** Redis is utilized for caching wallet balances and transaction data.
 
-## 📦 Installation
+## Installation
 
 To install and run the project, follow these steps:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/wallet-service.git
+    git clone https://github.com/jacksonn455/wallet-service.git
     ```
 
 2. **Enter the project folder:**
@@ -101,7 +101,7 @@ To install and run the project, follow these steps:
 
 The API will be available at http://localhost:3001
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 | Variable | Description |
 |--------|------------|
@@ -122,13 +122,13 @@ The API will be available at http://localhost:3001
 | NEW_RELIC_LOG_LEVEL | New Relic log level |
 | NEW_RELIC_ENABLED | Enable/disable New Relic |
 
-## 💬 Messaging
+## Messaging
 
 The service uses **RabbitMQ** for asynchronous messaging, enabling reliable, scalable, and decoupled transaction processing.
 
 ![](https://github.com/jacksonn455/wallet-service/blob/main/images/rabbitmq.png)
 
-## 📚 API Documentation
+## API Documentation
 
 Comprehensive API documentation is available at:
 
@@ -145,7 +145,7 @@ http://localhost:3001/api-docs
 
 ![](https://github.com/jacksonn455/wallet-service/blob/main/images/swagger.png)
 
-## 🐳 Docker Setup
+## Docker Setup
 
 You can run the service using either **Docker** or **Docker Compose**.
 
@@ -176,7 +176,7 @@ You can run the service using either **Docker** or **Docker Compose**.
 
 > The `docker-compose.yml` file includes all necessary services like PostgreSQL, Redis, and RabbitMQ.
 
-## 🔑 Authentication & Security
+## Authentication & Security
 
 This project uses **JWT authentication** to secure API routes. To access protected resources, include the JWT token in the `Authorization` header as a Bearer token.
 
@@ -187,54 +187,7 @@ This service uses JWT authentication on all protected routes.
 Required environment variable:
 JWT_SECRET=ILIACHALLENGE
 
-### Auth Endpoints
-
-#### Register
-```http
-POST /auth/register
-Content-Type: application/json
-
-{
-    "email": "user@example.com",
-    "password": "securePassword123",
-    "name": "John Doe"
-}
-```
-
-**Response:**
-```json
-{
-    "id": "user_id",
-    "email": "user@example.com",
-    "name": "John Doe",
-    "createdAt": "2024-01-15T10:00:00Z"
-}
-```
-
-#### Login
-```http
-POST /auth/login
-Content-Type: application/json
-
-{
-    "email": "user@example.com",
-    "password": "securePassword123"
-}
-```
-
-**Response:**
-```json
-{
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-    "user": {
-        "id": "user_id",
-        "email": "user@example.com",
-        "name": "John Doe"
-    }
-}
-```
-
-## 💰 Wallet API Endpoints
+##  Wallet API Endpoints
 
 All wallet endpoints require authentication via JWT token.
 
@@ -343,13 +296,13 @@ X-RateLimit-Reset: 1640995200
 }
 ```
 
-## 🧪 Testing
+## Testing
 
 The project uses **Jest** for unit and integration tests, ensuring code reliability and correctness.
 
 ![](https://github.com/jacksonn455/wallet-service/blob/main/images/jest.png)
 
-## 📊 Monitoring
+## Monitoring
 
 This application is integrated with **New Relic APM** for comprehensive monitoring:
 
@@ -368,7 +321,7 @@ This application is integrated with **New Relic APM** for comprehensive monitori
 
 ![](https://github.com/jacksonn455/wallet-service/blob/main/images/new-relic.png)
 
-## 🔀 Gitflow & Code Review
+## Gitflow & Code Review
 
 This project follows Gitflow practices:
 - Development was done using feature branches
