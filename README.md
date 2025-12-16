@@ -46,9 +46,11 @@ wallet-service/
 - **JWT** - Authentication and authorization
 - **Swagger** - API documentation
 - **Docker** - Containerization
+- **New Relic** - Application Monitoring & Observability
 
 ## Features
 
+- ✅ Domain-Driven Architecture
 - ✅ Digital wallet creation and management
 - ✅ Transaction processing (credit/debit)
 - ✅ Async transaction processing queue via RabbitMQ
@@ -63,6 +65,7 @@ wallet-service/
 
 The service is built using a modular architecture, following best practices for scalability and maintainability:
 
+- **Domain-Driven Architecture**: Organized by domain, facilitating navigation, testing, and future refactoring. This approach aligns with principles like Domain-Driven Design (DDD) and Clean Architecture.
 - **API Layer:** Handles HTTP requests and responses, input validation, and authentication.
 - **Service Layer:** Contains business logic for wallet and transaction management.
 - **Repository Layer:** Abstracts data access using Prisma ORM for PostgreSQL.
