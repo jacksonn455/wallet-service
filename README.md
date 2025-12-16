@@ -96,7 +96,12 @@ To install and run the project, follow these steps:
 
 5. **Run the development server:**
     ```bash
-    npm run dev
+    npm start
+    ```
+
+    **Run test:**
+    ```bash
+    npm run test
     ```
 
 The API will be available at http://localhost:3001
@@ -275,8 +280,6 @@ The API implements rate limiting to protect endpoints from abuse:
 
 | Endpoint               | Limit        | Time Window | Purpose                           |
 |------------------------|--------------|-------------|-----------------------------------|
-| `/auth/login`          | 5 requests   | 15 minutes  | Prevent brute force attacks       |
-| `/auth/register`       | 3 requests   | 1 hour      | Prevent spam registrations        |
 | `/wallet/transactions` | 100 requests | 1 minute    | Prevent transaction flooding      |
 | Global limit           | 1000 requests| 15 minutes  | Overall API protection            |
 
