@@ -7,9 +7,9 @@
     "build": "tsc",
     "test": "jest"
   },
-  "author": "",
+  "author": "Jackson Magnabosco",
   "license": "ISC",
-  "description": "",
+  "description": "Digital wallet microservice built with Node.js and TypeScript, featuring JWT auth, async transactions, caching and monitoring.",
   "dependencies": {
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
