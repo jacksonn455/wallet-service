@@ -32,8 +32,14 @@ export const authMiddleware = (
       return;
     }
 
-    const decoded = jwt.verify(token, JWT_SECRET) as JWTPayload;
-    req.user = decoded;
+const decoded = jwt.verify(token, JWT_SECRET) as JWTPayload;
+
+req.user = {
+  userId: decoded.userId,
+  email: decoded.email,
+};
+
+    
     next();
   } catch (error) {
     if (error instanceof jwt.JsonWebTokenError) {

@@ -324,6 +324,11 @@ This application is integrated with **New Relic APM** for comprehensive monitori
 
 ![](https://github.com/jacksonn455/wallet-service/blob/main/images/new-relic.png)
 
+## 🔮 Future Improvements
+- Centralized log storage using MongoDB
+- Test coverage and code quality analysis with SonarQube
+- CI/CD automation with quality gates
+
 ## Gitflow & Code Review
 
 This project follows Gitflow practices:
