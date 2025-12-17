@@ -331,6 +331,8 @@ This application is integrated with **New Relic APM** for comprehensive monitori
 - Centralized log storage using MongoDB
 - Test coverage and code quality analysis with SonarQube
 - CI/CD automation with quality gates
+- Loading and stress test using K6
+
 
 ## Gitflow & Code Review
 
